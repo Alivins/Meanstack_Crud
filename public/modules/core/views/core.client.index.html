@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Mean Stack CRUD</title>
+
+	<!-- FOR ANGULAR ROUTING -->
+	<base href="/">
+</head>
+<!-- 웹 페이지에 AngularJS를 적용하기 위해서 ng-app 지시자에 명시된 값으로 angularJS를 부트스트랩한다. -->
+<body ng-app="meancrud">
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<a href="/" class="navbar-brand">
+					<strong>Mean Stack CRUD Test</strong>
+				</a>
+			</div>
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<a href="/crud/create">글쓰기</a>
+					</li>
+					<li>
+						<a href="/crud/list">글목록</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- ng-view 영역에서 템플릿이 변경되며 화면이 바뀌게 된다. -->
+	<section ng-view autoscroll="true" class="container"></section>
+	
+	<!-- CSS  -->
+	<!-- load bootstrap and custom CSS -->
+	<link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="modules/core/css/core.client.style.css">
+	<link rel="stylesheet" href="modules/crud/css/crud.client.style.css">
+
+	<!-- JS -->
+	<!-- load angular -->
+	<script src="lib/angular/angular.min.js"></script>
+	<script src="lib/angular-route/angular-route.min.js"></script>
+	<script src="lib/angular-resource/angular-resource.min.js"></script>
+
+	<!-- bootstrap js -->
+	<script src="lib/jquery/dist/jquery.min.js"></script>
+	<script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+
+	<script src="modules/config.js"></script>
+	<script src="modules/app.js"></script>
+
+	<!-- modules -->
+	<script src="modules/core/core.client.module.js"></script>
+	<script src="modules/crud/crud.client.module.js"></script>
+
+  	<!-- routes -->
+	<script src="modules/core/config/core.client.routes.js"></script>
+	<script src="modules/crud/config/crud.client.routes.js"></script>
+
+	<!-- controllers -->
+	<script src="modules/core/controllers/core.client.controller.js"></script>
+	<script src="modules/crud/controllers/crud.client.controller.js"></script>
+
+	<!-- services -->
+	<script src="modules/core/services/core.client.service.js"></script>
+	<script src="modules/crud/services/crud.client.service.js"></script>
+
+	<!-- models -->
+	<script src="modules/core/services/core.client.model.js"></script>
+	<script src="modules/crud/services/crud.client.model.js"></script>
+</body>
+</html>

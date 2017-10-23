@@ -1,0 +1,11 @@
+{
+  "name": "crud_mean",
+  "version": "0.0.1",
+  "description": "mean crud application",
+  "dependencies": {
+    "angular": "~1.4.7",
+    "angular-route": "~1.4.7",
+    "angular-resource": "~1.4.7",
+    "bootstrap": "~3.3.5"
+  }
+}

@@ -1,0 +1,26 @@
+<!-- ng-click 지시자는 해당 버튼이 클릭되었을 때 수행될 함수를 등록 가능하다. -->
+<div class="col-lg-12 padding-top">
+	<form class="form-horizontal" ng-submit="goUpdate()">
+
+		<div class="form-group">
+			<input type="text" id="subject" name="subject" class="form-control" ng-model="crudData.crud_subject" readonly>
+		</div>
+
+		<div class="form-group">
+			<input type="text" id="username" name="username" class="form-control" ng-model="crudData.crud_writer" readonly>
+		</div>
+
+		<div class="form-group">
+			<textarea class="form-control" name="ir1" id="ir1" rows="15" ng-model="crudData.crud_contents" readonly></textarea>
+		</div>
+
+		<div class="form-group form-line">
+			<div class="col-sm-offset-8 col-sm-2">
+				<a href="/crud/update/{{crudData._id}}" class="btn btn-success btn-lg btn-block btn-complete">수정 하기</a>
+			</div>
+			<div class="col-sm-2">
+				<button ng-click="deleteCrud()" class="btn btn-primary btn-lg btn-block btn-complete">삭제 하기</button>
+			</div>
+		</div>
+	</form>
+</div>
